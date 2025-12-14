@@ -4,5 +4,7 @@ import { Login } from './pages/login/login';
 
 export const routes: Routes = [
     {path: '', component: Home},
-    {path: 'login', component: Login}
+    {path: 'login', component: Login},
+    {path: 'produtos/:id', component: Login},
 ];
+

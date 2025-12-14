@@ -1,2 +1,24 @@
-<app-navbar />
+<!-- Navbar comentado:
+     Se estivesse ativo, o menu apareceria sempre,
+     independentemente do usuário estar logado -->
+<!-- <app-navbar /> -->
+
+<!--
+  @if é o novo controle de fluxo do Angular (Angular 17+ / 21)
+  Ele funciona como uma condição:
+  - autenticado() deve retornar true ou false
+  - Se retornar true, o navbar é exibido
+  - Se retornar false, o navbar não é renderizado
+-->
+@if (autenticado()) {
+  <app-navbar />
+}
+
+<!--
+  router-outlet é o ponto onde o Angular carrega
+  o component correspondente à rota atual
+  Ex:
+  /login → LoginComponent
+  /home  → HomeComponent
+-->
 <router-outlet />
